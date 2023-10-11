@@ -26,6 +26,7 @@ export default function Auth({
                         alt="wave"
                         className="h-full w-[40rem] fixed -top-o  -right-20 "
                     />
+                    <p>oi</p>
                 </div>
             </section>
         </main>
