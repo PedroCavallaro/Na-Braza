@@ -1,16 +1,17 @@
 import { Button } from "../Button";
 import { MdShoppingBag } from "react-icons/md";
-export default function HeroText() {
+
+interface HeroTextProps {
+    name: string;
+    description: string;
+}
+
+export default function HeroText({ description, name }: HeroTextProps) {
     return (
         <section className="text-white flex flex-col gap-6 mb-10">
             <h1 className="text-3xl font-bold ">Pra Hoje!</h1>
-            <h2 className="text-2xl">Três Queijos</h2>
-            <p className="w-[28rem] text-lg font-light">
-                Desfrute de uma explosão de sabor irresistível com nossa
-                deliciosa Pizza de Três Queijos. Cada mordida é uma experiência
-                indulgente que combina harmoniosamente três queijos premium
-                cuidadosamente selecionados.
-            </p>
+            <h2 className="text-2xl">{name}</h2>
+            <p className="w-[28rem] text-lg font-light">{description}</p>
             <span className="flex gap-2 text-lg">
                 Apenas
                 <p className="font-bold text-orange-400">R$ 20,00</p>

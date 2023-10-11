@@ -5,8 +5,16 @@ import PizzaCard from "../PizzaCard";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./PizzaSlider.css";
+import { Products } from "@/@types/types";
 
-export default function PizzaSlider() {
+interface PizzaSliderProps {
+    products: Array<Products>;
+    handleSlideChange: (index: number) => void;
+}
+export default function PizzaSlider({
+    products,
+    handleSlideChange,
+}: PizzaSliderProps) {
     return (
         <section className="w-[37rem]">
             <Swiper
@@ -15,14 +23,22 @@ export default function PizzaSlider() {
                 navigation={{
                     enabled: true,
                 }}
-                onSlideChange={(slide) => {}}
+                onSlideChange={(slide) => {
+                    console.log(slide.activeIndex);
+                    handleSlideChange(slide.activeIndex);
+                }}
             >
-                <SwiperSlide>
-                    <PizzaCard />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <PizzaCard />
-                </SwiperSlide>
+                {products.map(({ evaluation, name, setup_time }, index) => {
+                    return (
+                        <SwiperSlide key={index.toString()}>
+                            <PizzaCard
+                                evaluation={evaluation}
+                                name={name}
+                                setup_time={setup_time}
+                            />
+                        </SwiperSlide>
+                    );
+                })}
             </Swiper>
         </section>
     );

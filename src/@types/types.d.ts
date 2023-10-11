@@ -14,3 +14,13 @@ export type Product = {
 export type SlideType = {
     activeIndex: number;
 };
+export type Products = {
+    name: string;
+    unit_value: number;
+    size: string;
+    price: number;
+    image: string;
+    setup_time: string;
+    description: string;
+    evaluation: number;
+};
