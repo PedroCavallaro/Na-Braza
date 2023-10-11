@@ -19,12 +19,10 @@ export default function PizzaSlider({
         <section className="w-[37rem]">
             <Swiper
                 modules={[Navigation]}
-                loop
                 navigation={{
                     enabled: true,
                 }}
                 onSlideChange={(slide) => {
-                    console.log(slide.activeIndex);
                     handleSlideChange(slide.activeIndex);
                 }}
             >
