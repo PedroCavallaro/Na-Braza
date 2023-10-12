@@ -5,10 +5,10 @@ import PizzaCard from "../PizzaCard";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./PizzaSlider.css";
-import { Products } from "@/@types/types";
+import { Product } from "@/@types/types";
 
 interface PizzaSliderProps {
-    products: Array<Products>;
+    products: Array<Product>;
     handleSlideChange: (index: number) => void;
 }
 export default function PizzaSlider({

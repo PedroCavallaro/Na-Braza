@@ -8,13 +8,11 @@ export type AuthConst = {
     buttonText: string;
 };
 
-export type Product = {
-    name: string;
-};
 export type SlideType = {
     activeIndex: number;
 };
-export type Products = {
+export type Product = {
+    id: number;
     name: string;
     unit_value: number;
     size: string;

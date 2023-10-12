@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { BsFillStopwatchFill } from "react-icons/bs";
 import { AiTwotoneStar } from "react-icons/ai";
@@ -18,7 +19,7 @@ export default function PizzaCard({
     return (
         <>
             <div
-                className="flex flex-col items-center justify-center"
+                className="flex flex-col items-center justify-center z-30 shadow-2xl"
                 onClick={handleCart}
             >
                 <Image
